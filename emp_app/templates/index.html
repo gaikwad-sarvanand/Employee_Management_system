@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% block title %} {% endblock %} {% block content%}
+<div class="container">
+  <h1>This is employee management system</h1>
+  <a class="btn btn-primary" href="{% url 'employee:list-emp'%}" role="button"
+    >View all employee</a
+  >
+  <a class="btn btn-primary" href="{% url 'employee:add-emp' %}" role="button"
+    >Add employee</a
+  >
+  <a class="btn btn-primary" href="#" role="button">View all Departments</a>
+  <a class="btn btn-primary" href="#" role="button">Add Department</a>
+  <a class="btn btn-primary" href="#" role="button">View all Role</a>
+  <a class="btn btn-primary" href="#" role="button">Add Role</a>
+</div>
+{%endblock %}

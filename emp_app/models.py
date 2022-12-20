@@ -1,21 +1,7 @@
 from django.db import models
-
+from role.models import Role
+from department.models import Department
 # Create your models here.
-
-
-class Department(models.Model):
-    name = models.CharField(max_length=100, null=False)
-    location = models.CharField(max_length=100)
-
-    def __str__(self):
-        return self.name
-
-
-class Role(models.Model):
-    name = models.CharField(max_length=100, null=False)
-
-    def __str__(self):
-        return self.name
 
 
 class Employee(models.Model):

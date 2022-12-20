@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block content%}
+
+<table class="table table-dark table-hover">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Location</th>
+    <th colspan="2">Actions</th>
+  </tr>
+  {% for dept in dept %}
+  <tr>
+    <td>{{dept.id}}</td>
+    <td>{{dept.name}}</td>
+    <td>{{dept.location}}</td>
+    <td><a href="{% url 'department:update-dept' dept.pk %}">Update</a></td>
+    <td><a href="{% url 'department:delete-dept' dept.pk %}">Delete</a></td>
+  </tr>
+  {%endfor%}
+</table>
+<a class="btn btn-primary" href="{% url 'employee:index' %}" role="button"
+  >Index page</a
+>
+{% endblock %}

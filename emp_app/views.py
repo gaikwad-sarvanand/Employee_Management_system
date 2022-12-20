@@ -65,3 +65,12 @@ def update_emp(request,pk):
             "emp":emp
         }
     return render(request,"update_emp.html",context)
+
+
+class EmployeeUpdateView(generic.UpdateView):
+    template_name = "update_emp.html"
+    queryset = Employee.objects.all()
+    form_class = EmployeeForm
+    
+    def get_success_url(self):
+        return reverse("employee:list-emp")

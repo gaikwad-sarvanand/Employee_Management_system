@@ -1,0 +1,21 @@
+{% extends 'base.html' %} {% block content%}
+<h1>View all Role</h1>
+<table class="table table-dark table-hover">
+  <tr>
+    <th>ID</th>
+    <th>Role Name</th>
+    <th colspan="2">Actions</th>
+  </tr>
+  {% for role in roles %}
+  <tr>
+    <td>{{role.id}}</td>
+    <td>{{role.name}}</td>
+    <td><a href="{% url 'role:update-role' role.pk %}">Update</a></td>
+    <td><a href="{% url 'role:delete-role' role.pk %}">Delete</a></td>
+  </tr>
+  {%endfor%}
+</table>
+<a class="btn btn-primary" href="{% url 'employee:index' %}" role="button"
+  >Index page</a
+>
+{% endblock %}

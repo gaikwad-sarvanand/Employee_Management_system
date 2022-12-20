@@ -17,7 +17,11 @@
   <a class="btn btn-primary" href="{% url 'department:add-dept'%}" role="button"
     >Add Department</a
   >
-  <a class="btn btn-primary" href="#" role="button">View all Role</a>
-  <a class="btn btn-primary" href="#" role="button">Add Role</a>
+  <a class="btn btn-primary" href="{% url 'role:list-role'%}" role="button"
+    >View all Role</a
+  >
+  <a class="btn btn-primary" href="{% url 'role:add-role'%}" role="button"
+    >Add Role</a
+  >
 </div>
 {%endblock %}
